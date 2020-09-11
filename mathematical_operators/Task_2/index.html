@@ -6,18 +6,18 @@
     <title>Task 1</title>
   </head>
   <body>
-    <p>What is the price of gasoline?</p>
-    <input type="number" id="gasoline" value="" />
-    <p>How much money do you have?</p>
-    <input type="number" id="money" value="" />
-    <p>Click the button to display how many liters of gasoline you get.</p>
+    <p>What was the distance in kilometres?</p>
+    <input type="number" id="distance" value="" />
+    <p>What was the time used in hours?</p>
+    <input type="number" id="time" value="" />
+    <p>Click the button to display the average speed.</p>
     <button onclick="myFunction()">Click</button>
     <p id="result"></p>
     <script>
       function myFunction() {
-        let price = document.getElementById("gasoline").value;
-        let money = document.getElementById("money").value;
-        let result = money / price;
+        let distance = document.getElementById("distance").value;
+        let time = document.getElementById("time").value;
+        let result = distance / time;
         document.getElementById("result").innerText =
           Math.round(result * 100) / 100;
       }
