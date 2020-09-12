@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <p>
+      Click the button to display all positive numbers that are odd and smaller
+      than 100 starting from 1.
+    </p>
+    <button onclick="myFunction()">Click</button>
+    <table style="margin-top: 1rem;">
+      <tr id="result"></tr>
+    </table>
+    <script>
+      function myFunction() {
+        let number = "";
+        for (let i = 1; i < 100; i++) {
+          if (i % 2 !== 0) {
+            number += i + ' ';
+          }
+          document.getElementById("result").innerText = number;
+        }
+      }
+    </script>
+  </body>
+</html>
