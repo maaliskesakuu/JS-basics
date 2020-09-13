@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3</title>
+  </head>
+  <body>
+    <p>
+      Click the button to start the program that asks repeatedly from the user
+      the distance (km) and time (h) and calculates average speed. The program
+      ends when user gives 0 for the distance. (After getting 0, the program
+      does not ask anything from the user.)
+    </p>
+    <button onclick="myFunction()">Click</button>
+
+    <script>
+      function myFunction() {
+        let distance;
+        let time;
+        let result;
+        distance = prompt("Give distance in kilometres", "");
+
+        while (distance != "0") {
+          time = prompt("Give time in hours");
+          result = alert(Math.round((distance / time) * 10) / 10 + " km/h");
+          distance = prompt("Give distance in kilometres", "");
+        }
+      }
+    </script>
+  </body>
+</html>
