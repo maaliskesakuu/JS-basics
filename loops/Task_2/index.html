@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <p>
+      Click the button to display all positive numbers that are smaller than 100
+      and even, in this order: 2 98 4 96 6 94 …
+    </p>
+    <button onclick="myFunction()">Click</button>
+    <table style="margin-top: 1rem">
+      <tr id="result"></tr>
+    </table>
+    <script>
+      function myFunction() {
+        let number = "";
+        let numberUp = 98;
+        for (let i = 1; i <= 50; i++) {
+          if (i % 2 === 0 && i !== 50) {
+            number += i + " " + numberUp + " ";
+            numberUp -= 2;
+          } else if (i === 50) {
+            console.log(i);
+            console.log(numberUp);
+            number += i;
+          }
+          document.getElementById("result").innerText = number;
+        }
+      }
+    </script>
+  </body>
+</html>
