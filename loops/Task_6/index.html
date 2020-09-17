@@ -3,27 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task 5</title>
+    <title>Task 6</title>
   </head>
   <body>
     <p>
-      Make a program that asks numbers from the user, until user gives 0 and then program ends. In the end program prints out average of the numbers.
+      Make a program that asks 25 numbers from the user. In the end program
+      prints out average of the numbers.
     </p>
     <button onclick="myFunction()">Click</button>
     <script>
       function myFunction() {
         let number;
         let sum = 0;
-        let numbersGiven = 0;
+        let numbersGiven = 25;
         let result;
 
-        while (number !== "0") {
-          number = prompt("Give a number ", "");
-          numbersGiven += 1;
+        for (let i = 0; i < 25; i++) {
+          number = prompt("Give a number", "");
           sum += +number;
         }
 
-        let average = sum / (numbersGiven - 1);
+        let average = sum / numbersGiven;
 
         result = alert("The average of the given numbers is " + average);
       }
