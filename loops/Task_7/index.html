@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 7</title>
+  </head>
+  <body>
+    <p>
+      Make a program that ask first one number from the user. After that the
+      program asks: ”Do you want to continue giving numbers?(y/n)”. If user
+      answers y, the program continues to ask another number. If user answers n,
+      program ends. In the end program prints out average of the numbers.
+    </p>
+    <button onclick="myFunction()">Click</button>
+    <script>
+      function myFunction() {
+        let number;
+        let sum = 0;
+        let numbersGiven = 0;
+        let result;
+
+        number = prompt("Give a number", "");
+        // console.log("number " + number);
+        sum += +number;
+        // console.log("the sum is " + sum);
+        numbersGiven += 1;
+        // console.log("numbers given " + numbersGiven);
+        while (true) {
+          if (confirm("Do you want to continue giving numbers?(y/n)")) {
+            // console.log("y");
+            number = prompt("Give a number", "");
+            // console.log("number " + number);
+            sum += +number;
+            // console.log("the sum is " + sum);
+            numbersGiven += 1;
+            // console.log("numbers given " + numbersGiven);
+          } else {
+            // console.log("n");
+            break;
+          }
+        }
+
+        let average = sum / numbersGiven;
+
+        result = alert("The average of the given numbers is " + average);
+      }
+    </script>
+  </body>
+</html>
