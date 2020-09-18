@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 8</title>
+  </head>
+  <body>
+    <p>
+      Make a program that asks first how many numbers user wants to give to the
+      program. After that program asks those numbers. In the end program prints
+      out the smallest number that user gave.
+    </p>
+    <button onclick="myFunction()">Click</button>
+    <script>
+      function myFunction() {
+        let numbersToBeGiven;
+        let number;
+        let smallestNumber;
+        let result;
+
+        numbersToBeGiven = prompt("How many numbers do you want to give?", "");
+        console.log(numbersToBeGiven);
+
+        number = prompt("Give a number", "");
+        // console.log("number " + number);
+        smallestNumber = number;
+        for (i = 1; i < numbersToBeGiven; i++) {
+          number = prompt("Give a number", "");
+        //   console.log("number " + number);
+
+          if (+number < +smallestNumber) {
+            smallestNumber = number;
+          } else {
+            smallestNumber = smallestNumber;
+          }
+        }
+
+        result = alert("The smallest number is " + smallestNumber);
+      }
+    </script>
+  </body>
+</html>
